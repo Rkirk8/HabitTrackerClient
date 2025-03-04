@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.min.css";
+
+fieldset {
+    margin: 5px;
+}
+
+label { 
+    width: 100px;
+    vertical-align: top;
+}
+
+textarea {
+    width: 500px;
+    height: 250px;
+}
+
+input { 
+    width: 500px;
+}
+
+.list-group-item-heading {
+    cursor: pointer;
+}
+
+.list-group-item-heading:hover {
+    text-decoration: underline;
+}
