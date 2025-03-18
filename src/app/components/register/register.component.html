@@ -1,15 +1,17 @@
-<main class="container">
-  <h1 class="title">Register</h1>
-  <form>
-    <label for="username">Username:</label>
-    <input id="username" type="text" required />
-
-    <label for="email">Email:</label>
-    <input id="email" type="email" required />
-
-    <label for="password">Password:</label>
-    <input id="password" type="password" required />
-
-    <button type="submit">Register</button>
-  </form>
-</main>
+<h1>Register</h1>
+<h5 [ngClass]="messageClass">{{ message }}</h5>
+<fieldset>
+  <label for="username">Username:</label>
+  <input id="username" type="text" [(ngModel)]="username" name="username" />
+</fieldset>
+<fieldset>
+  <label for="password">Password:</label>
+  <input id="password" type="password" [(ngModel)]="password" name="password" />
+</fieldset>
+<fieldset>
+  <label for="confirmPassword">Confirm Password:</label>
+  <input id="confirmPassword" type="password" [(ngModel)]="confirmPassword" name="confirmPassword" />
+</fieldset>
+<fieldset>
+  <button type="submit" (click)="register()">Register</button>
+</fieldset>

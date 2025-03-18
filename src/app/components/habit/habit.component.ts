@@ -12,7 +12,7 @@ export class Habit {
 
 @Component({
   selector: 'app-habit',
-  imports: [NgFor, NgIf, FormsModule],
+  imports: [NgFor, FormsModule, NgIf],
   templateUrl: './habit.component.html',
   styleUrl: './habit.component.css'
 })
@@ -57,26 +57,26 @@ export class HabitComponent implements OnInit {
   }
 
   clearForm(): void {
+    this._id = undefined;
     this.name = undefined;
     this.category = undefined;
     this.description = undefined;
-    this._id = undefined;
   }
 
   selectHabit(habit: Habit): void {
     this._id = habit._id;
     this.name = habit.name;
-    this.category = habit.category;
     this.description = habit.description;
+    this.category = habit.category;
   }
-  
+
   deleteHabit(_id: string): void {
-    if (confirm("Are you sure you want to delete this habit?")) {
+    if (confirm('Are you sure you want to delete this habit?')) {
       this.habitService.deleteHabit(_id).subscribe(response => {
         this.getHabits();
         this.clearForm();
-      })
-    }
+      });
+    }      
   }
 
   updateHabit(): void {

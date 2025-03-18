@@ -1,7 +1,5 @@
 <main class="container">
     <h1>Habit Tracker</h1>
-    
-    
     <div class="row">
         <section class="col-lg-6">
             <ul class="list-group">
@@ -26,13 +24,12 @@
                     <label for="description" class="control-label">Description:</label>
                     <textarea [(ngModel)]="description" name="description"></textarea>
                 </fieldset>
-                <input type="hidden" [(ngModel)]="_id" name="_id" type = "hidden" />
-                <button class="btn btn-primary offset-6 m-1" (click)="addHabit()" *ngIf="!_id">Save</button> <!-- show if there is no _id -->
-                <button class="btn btn-primary offset-6 m-1" (click)="updateHabit()" *ngIf="_id">Save</button> <!-- show if there is an _id -->
-                <button class="btn btn-primary offset-6 m-1" (click)="clearForm()">Reset</button>
+                <input [(ngModel)]="_id" name="_id" type="hidden" />
+                <button class="btn btn-primary offset-6 m-1" (click)="addHabit()" *ngIf="!_id">Save</button>
+                <button class="btn btn-primary offset-6 m-1" (click)="updateHabit()" *ngIf="_id">Save</button>
+                <button class="btn btn-primary m-1" (click)="clearForm()">Reset</button>
                 <button class="btn btn-danger" *ngIf="_id" (click)="deleteHabit(_id)">Delete</button>
             </form>
         </section>
     </div>
 </main>
-

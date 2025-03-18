@@ -18,25 +18,24 @@ export class HabitService {
     return this.http.get(`${this.serverUrl}/habits`);
   }
 
-
-  //GET: one
-  //getHabit(_id: string) {
-  //return this.http.get(`${this.serverUrl}/habits/${_id}`);
-  //}
+  // // GET: one
+  // getHabit(_id: string) {
+  //   return this.http.get(`${this.serverUrl}/habits/${_id}`);
+  // }
 
   // POST: add new object
   addHabit(habit: any) {
     return this.http.post(`${this.serverUrl}/habits`, habit);
   }
 
-  // Delete 
+  // DELETE
   deleteHabit(_id: string) {
-    return this.http.delete(`${this.serverUrl}/habits/${_id}`);
+    return this.http.delete(`${this.serverUrl}/habits/${_id}`)
   }
 
-  // updateHabit
+  // UPDATE
   updateHabit(habit: any) {
-    return this.http.put(`${this.serverUrl}/habits/${habit._id}`, habit);
+    return this.http.put(`${this.serverUrl}/habits/${habit._id}`, habit)
   }
 
 }
