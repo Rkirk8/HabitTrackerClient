@@ -8,6 +8,7 @@ export class Habit {
   name: string | undefined;
   category: string | undefined;
   description: string | undefined;
+
 };
 
 @Component({
@@ -31,11 +32,12 @@ export class HabitComponent implements OnInit {
   name: string | undefined;
   category: string | undefined;
   description: string | undefined;
+  keyword: string | undefined;
 
   getHabits(): void {
-    this.habitService.getHabits().subscribe(response => {
+    this.habitService.getHabits(this.keyword).subscribe(response => {
       this.HABITS = response;
-    })
+    });
   }
 
   addHabit(): void {
@@ -61,6 +63,8 @@ export class HabitComponent implements OnInit {
     this.name = undefined;
     this.category = undefined;
     this.description = undefined;
+    this.keyword = undefined;
+    this.getHabits();
   }
 
   selectHabit(habit: Habit): void {
@@ -91,6 +95,10 @@ export class HabitComponent implements OnInit {
       this.getHabits();
       this.clearForm();
     });
+  }
+
+  search(): void {
+    this.getHabits();
   }
 
   ngOnInit(): void {

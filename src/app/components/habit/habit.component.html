@@ -2,6 +2,7 @@
     <h1>Habit Tracker</h1>
     <div class="row">
         <section class="col-lg-6">
+            <input [(ngModel)]="keyword" /><button class="btn btn-primary" (click)="search()">Search</button>
             <ul class="list-group">
                 <li *ngFor="let habit of HABITS" class="list-group-item">
                     <h4 class="list-group-item-heading" (click)="selectHabit(habit)">{{habit.name}}</h4>

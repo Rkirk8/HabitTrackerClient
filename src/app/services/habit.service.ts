@@ -14,7 +14,7 @@ export class HabitService {
   serverUrl: string = environment.serverUrl;
 
   // GET: all
-  getHabits() {
+  getHabits(keyword: string | undefined) {
     return this.http.get(`${this.serverUrl}/habits`);
   }
 
