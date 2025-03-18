@@ -93,16 +93,6 @@ export class HabitComponent implements OnInit {
     });
   }
 
-  searchHabits(keyword: string): void {
-    if (keyword) {
-      this.habitService.searchHabits(keyword).subscribe(response => {
-        this.HABITS = response;
-      });
-    } else {
-      this.getHabits();
-    }
-  }
-
   ngOnInit(): void {
     this.getHabits();
   }

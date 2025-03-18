@@ -18,10 +18,6 @@ export class HabitService {
     return this.http.get(`${this.serverUrl}/habits`);
   }
 
-  //search
-  searchHabits(habitSearch: string) {
-    return this.http.get(`${this.serverUrl}/habits/search/${keyword}`);
-  }
 
   //GET: one
   //getHabit(_id: string) {
