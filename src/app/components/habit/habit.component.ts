@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgFor, NgIf } from '@angular/common';
 import { HabitService } from '../../services/habit.service';
 import { FormsModule } from '@angular/forms';
+import { AuthService } from '../../services/auth.service';
 
 export class Habit {
   _id: string | undefined;
@@ -25,7 +26,7 @@ export class HabitComponent implements OnInit {
   //   { _id: 'ghi890', name: 'Workout', category: 'Health', description: 'To stay fit' }
   // ]
 
-  constructor (private habitService: HabitService) { }
+  constructor (private habitService: HabitService, private authService: AuthService) { }
 
   HABITS: any;
   _id: string | undefined;
@@ -33,6 +34,7 @@ export class HabitComponent implements OnInit {
   category: string | undefined;
   description: string | undefined;
   keyword: string | undefined;
+  username: string | null = null;
 
   getHabits(): void {
     this.habitService.getHabits(this.keyword).subscribe(response => {
@@ -103,5 +105,9 @@ export class HabitComponent implements OnInit {
 
   ngOnInit(): void {
     this.getHabits();
+    //populate username from auth service
+    this.authService.username.subscribe(username => {
+      this.username = username
+    });
   }
 }
