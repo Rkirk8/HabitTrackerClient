@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    serverUrl: 'https://habit-tracker-iota-khaki.vercel.app/api/v1'
+    serverUrl: 'https://habit-tracker-git-main-rielly-kirks-projects.vercel.app/api/v1'
 };
