@@ -6,7 +6,6 @@ import { routes } from './app.routes';
 // data services to connect to backend API
 import { HabitService } from './services/habit.service';
 import { provideHttpClient } from '@angular/common/http';
-//--Import Transloco -----------------------------------------------------------------------------------------------
 import { TranslocoHttpLoader } from './transloco-loader';
 import { provideTransloco } from '@jsverse/transloco';
 
