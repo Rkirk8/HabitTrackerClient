@@ -1,7 +1,12 @@
 {
-    "title": "habit-Tracker",
+  "choose-Language": "Choose a language",
+  "en": "English",
+  "es": "Spanish",
+  "fr": "French",
+  "nav": {
     "habits": "Habits",
     "register": "Register",
     "login": "Login",
     "logout": "Logout"
+  }
 }

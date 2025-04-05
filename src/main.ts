@@ -3,6 +3,9 @@ import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app.component';
 import { HabitComponent } from './app/components/habit/habit.component';
 import { HomeComponent } from './app/components/home/home.component';
+import { translocoConfig } from '@jsverse/transloco';
 
-bootstrapApplication(AppComponent, appConfig)
+
+bootstrapApplication(AppComponent, appConfig )
   .catch((err) => console.error(err));
+

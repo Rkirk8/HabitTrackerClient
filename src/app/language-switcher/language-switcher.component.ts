@@ -19,7 +19,7 @@ export class LanguageSwitcherComponent {
 
     // get available langs
     const availableLangs = this.translocoService.getAvailableLangs();
-    //check if lang are provide as string or objact then handle accordingly
+    //check if lang are provide as string or object then handle accordingly
     if (Array.isArray(availableLangs) && typeof availableLangs[0] === 'string') {
       this.langs = availableLangs as string[];
     } else {

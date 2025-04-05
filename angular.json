@@ -27,9 +27,9 @@
                 "output": "assets"
               },
               {
-                "glob": "**/*",
-                "input": "src/favicon",
-                "output": "favicon"
+                "glob": "favicon.ico",
+                "input": "public",
+                "output": "/"
               }
             ],
             "styles": [
