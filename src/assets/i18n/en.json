@@ -1,1 +1,9 @@
-{}
+{
+  "nav": {
+    "title": "habit-Tracker",
+    "habits": "Habits",
+    "register": "Register",
+    "login": "Login",
+    "logout": "Logout"
+  }
+}

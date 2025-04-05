@@ -2,10 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { NgIf } from '@angular/common';
+import { LanguageSwitcherComponent } from '../../language-switcher/language-switcher.component';
 
 @Component({
   selector: 'app-nav',
-  imports: [RouterLink, NgIf],
+  imports: [RouterLink, NgIf, LanguageSwitcherComponent],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.css'
 })
